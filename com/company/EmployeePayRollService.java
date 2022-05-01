@@ -6,16 +6,16 @@ import java.util.List;
 import java.util.Scanner;
 public class EmployeePayRollService {
 
-    private List<employeePayRollData> employeePayRollList;
+    private List<EmployeePayRollData> employeePayRollList;
 
     public EmployeePayRollService(){}
 
-    public EmployeePayRollService(ArrayList<employeePayRollData> employeePayRollList) {
+    public EmployeePayRollService(ArrayList<EmployeePayRollData> employeePayRollList) {
     }
 
     public static void main(String[] args) {
         System.out.println("Welcome to employee roll pay program");
-        ArrayList<employeePayRollData> employeePayRollList = new ArrayList<>();
+        ArrayList<EmployeePayRollData> employeePayRollList = new ArrayList<>();
         EmployeePayRollService employeePayRollService = new EmployeePayRollService(employeePayRollList);
         Scanner inputConsoleReader = new Scanner(System.in);
         employeePayRollService.readEmployeePayRollData(inputConsoleReader);
@@ -29,7 +29,7 @@ public class EmployeePayRollService {
         String name = inputConsoleReader.next();
         System.out.println("Enter salary of the employee");
         double salary = inputConsoleReader.nextDouble();
-        employeePayRollList.add(new employeePayRollData(id, name, salary));
+        employeePayRollList.add(new EmployeePayRollData(id, name, salary));
     }
 
     public void writeEmployeePayRollData(){

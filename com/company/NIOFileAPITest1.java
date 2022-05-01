@@ -45,7 +45,7 @@ class NIOFileAPITest1 {
     }
 
     @Test
-    public void tets()throws IOException{
+    public void givenADirectoryWhenWatchedListAllTheActivity()throws IOException{
         Path dir = Paths.get(home+ "/" + playWithIO);
         Files.list(dir).filter(Files ::isRegularFile).forEach(System.out::println);
         new Java8WatchServeExample(dir).processEvent();
